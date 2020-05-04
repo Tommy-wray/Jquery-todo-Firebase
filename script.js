@@ -17,9 +17,9 @@ $(document).ready(function () {
       const todoitem = element.data();
       console.log({todoitem, ...todoitem.status})
       if (todoitem.status === 1 ) {
-        $("ol").append('<li class="strike" id="' + element.id +  '">' + todoitem.task +  "</li>");
+        $("ol").prepend('<li class="strike" id="' + element.id +  '">' + todoitem.task +  "</li>");
       } else {
-        $("ol").append('<li id="' + element.id +  '">' + todoitem.task +  "</li>");
+        $("ol").prepend('<li id="' + element.id +  '">' + todoitem.task +  "</li>");
       }
     });
   }
